@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Prueba Front-End Envia.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Resultados:
+Para el corto tiempo que tuve para realizar esto siento que pude haber hecho mas, pero simplemente me atore un poco con el componente de la tabla de ordenes ya que tuve varios problemas con el fetch del API y mas cuando queria meterme a ver los detalles, no me dejaba por temas del CORS.
 
-## Available Scripts
+Igual con mas tiempo pude haber creado mis propios estilos de tailwind. Ya que cuestan los pre-usados y no hay buenos gratis.
 
-In the project directory, you can run:
 
-### `npm start`
+# Descripción:
+Realiza una interfaz de usuario con un diseño que tenga buena usabilidad, sea
+intuitivo y cumpla con las especificaciones que se describen a continuación:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  1. Crea una tabla de pago donde se listarán los productos de la orden de compra.
+  2. Crea un formulario donde se pueda agregar productos a la tabla antes
+mencionada.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Puntos a calificar:
+  ● Limpieza y estructura del código
+  ● Diseño de la página realizada.
+  ● Cumplimiento de la funcionalidad y especificaciones mencionadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Especificaciones:
+1. Para obtener la información de la orden de compra, así como los productos,
+deberás realizar una petición (request) usando el método GET a la siguiente
+URL: https://eshop-deve.herokuapp.com/api/v2/orders
+2. Enlista las órdenes y al hacer click podemos ver el detalle de cada una.
+3. Es importante que tenga en cuenta que para acceder al API deberá enviar el
+token en el Authorization header de la petición: *Por seguridad no esta*
+Obtendrás un JSON con la información de la orden y deberá desplegar los
+productos en la tabla del punto 1 de la descripción del examen, los cuales se
+encuentran en el atributo items del JSON.
+5. Los campos que deben considerar para mostrar los productos son:
+● Sku
+● Name
+● Quantity
+● Price
+6. También deberás indicar en alguna parte al principio de la página web el
+número de la orden indicado en el atributo number.
+7. En el formulario ya mencionado debes incluir los mismos campos de los
+productos mostrados, es decir, sku, name, quantity y price, al igual que un
+botón de agregar que al hacer click, la información capturada se agregue a la
+tabla de productos de la orden.
+8. (Opcional) Agregar todos los campos del formulario como campos obiligatorios
+y si no se captura información en alguno de éstos, marcarlo de color rojo e
+indicar que es obligatorio.
+9. (Opcional) Agregar botón de pagar y que al hacer clic, muestre una alerta
+indicando que el proceso fue exitoso, esta alerta deberá tener un diseño
+agradable.
