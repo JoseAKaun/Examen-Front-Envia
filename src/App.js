@@ -1,14 +1,12 @@
-import logo from './logo.svg';
-import './index.css';
+import React from 'react';
+import PaymentTable from './components/PaymentTable';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Gaming
-        </p>
+        {/* Other components or content */}
+        <PaymentTable /> {/* This line includes the payment table*/}
       </header>
     </div>
   );
