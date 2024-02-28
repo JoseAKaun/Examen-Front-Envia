@@ -1,6 +1,6 @@
 # Prueba Front-End Envia.com
 
-#Resultados:
+# Resultados:
 Para el corto tiempo que tuve para realizar esto siento que pude haber hecho mas, pero simplemente me atore un poco con el componente de la tabla de ordenes ya que tuve varios problemas con el fetch del API y mas cuando queria meterme a ver los detalles, no me dejaba por temas del CORS.
 
 Igual con mas tiempo pude haber creado mis propios estilos de tailwind. Ya que cuestan los pre-usados y no hay buenos gratis.
