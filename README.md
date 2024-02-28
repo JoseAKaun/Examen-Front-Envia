@@ -3,7 +3,7 @@
 # Resultados:
 Para el corto tiempo que tuve para realizar esto siento que pude haber hecho mas, pero simplemente me atore un poco con el componente de la tabla de ordenes ya que tuve varios problemas con el fetch del API y mas cuando queria meterme a ver los detalles, no me dejaba por temas del CORS.
 
-Igual con mas tiempo pude haber creado mis propios estilos de tailwind. Ya que cuestan los pre-usados y no hay buenos gratis.
+Igual con mas tiempo pude haber creado mis propios estilos de tailwind. Ya que cuestan los pre-creados.
 
 
 # Descripción:
@@ -26,25 +26,32 @@ mencionada.
 deberás realizar una petición (request) usando el método GET a la siguiente
 URL: https://eshop-deve.herokuapp.com/api/v2/orders
 2. Enlista las órdenes y al hacer click podemos ver el detalle de cada una.
+
+
+
 3. Es importante que tenga en cuenta que para acceder al API deberá enviar el
 token en el Authorization header de la petición: *Por seguridad no esta*
 Obtendrás un JSON con la información de la orden y deberá desplegar los
 productos en la tabla del punto 1 de la descripción del examen, los cuales se
 encuentran en el atributo items del JSON.
-5. Los campos que deben considerar para mostrar los productos son:
-● Sku
-● Name
-● Quantity
-● Price
-6. También deberás indicar en alguna parte al principio de la página web el
+4. Los campos que deben considerar para mostrar los productos son:
+   
+  ● Sku
+  ● Name
+  ● Quantity
+  ● Price
+5. También deberás indicar en alguna parte al principio de la página web el
 número de la orden indicado en el atributo number.
-7. En el formulario ya mencionado debes incluir los mismos campos de los
+
+6. En el formulario ya mencionado debes incluir los mismos campos de los
 productos mostrados, es decir, sku, name, quantity y price, al igual que un
 botón de agregar que al hacer click, la información capturada se agregue a la
 tabla de productos de la orden.
-8. (Opcional) Agregar todos los campos del formulario como campos obiligatorios
+
+7. (Opcional) Agregar todos los campos del formulario como campos obiligatorios
 y si no se captura información en alguno de éstos, marcarlo de color rojo e
 indicar que es obligatorio.
-9. (Opcional) Agregar botón de pagar y que al hacer clic, muestre una alerta
+
+8. (Opcional) Agregar botón de pagar y que al hacer clic, muestre una alerta
 indicando que el proceso fue exitoso, esta alerta deberá tener un diseño
 agradable.
