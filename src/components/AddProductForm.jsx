@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const AddProductForm = ({ onAddProduct }) => {
   const [product, setProduct] = useState({ sku: '', name: '', quantity: '', price: '' });
   const handlePayment = () => {
-  alert('Payment process was successful!');
+  alert('Payment successful!');
 };
 
   const handleSubmit = (e) => {

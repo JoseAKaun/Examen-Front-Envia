@@ -31,29 +31,29 @@ const OrdersTable = () => {
 
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-xl font-bold mb-4">Orders (Examen)</h1>
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full text-sm text-left text-blue-600 bg-blue-500">
-  <thead className="text-xs uppercase bg-green-500 text-white">
-    <tr>
-      <th scope="col" className="px-6 py-3">Sku</th>
-      <th scope="col" className="px-6 py-3">Name</th>
-      <th scope="col" className="px-6 py-3">Quantity</th>
-      <th scope="col" className="px-6 py-3">Price</th>
-    </tr>
-  </thead>
-  <tbody>
-            {orders.map((order, orderIndex) =>
+  <div className="container mx-auto p-4 text-white bg-bgbg">
+    <h1 className="text-xl font-bold mb-4 text-white">Orders (Examen)</h1>
+    <div className="relative overflow-x-auto shadow-md sm:rounded-lg text-white">
+      <table className="w-full text-sm text-left text-white bg-tblbg">
+        <thead className="text-xs uppercase text-wtx border-b">
+          <tr>
+            <th scope="col" className="border-r border-brd px-6 py-3">Sku</th>
+            <th scope="col" className="border-r border-brd px-6 py-3">Name</th>
+            <th scope="col" className="border-r border-brd px-6 py-3">Quantity</th>
+            <th scope="col" className="border-r border-brd px-6 py-3">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {orders.map((order, orderIndex) =>
             order.items.map((item, itemIndex) => {
               const uniqueKey = `order-${orderIndex}-item-${itemIndex}`;
               const price = parseFloat(item.price);
               return (
-                <tr key={uniqueKey} onClick={() => goToOrderDetail(order.id)} className="odd:bg-blue-100 even:bg-blue-200 hover:bg-yellow-200 cursor-pointer">
-                <th scope="row" className="px-6 py-4 font-medium text-black">{item.sku}</th>
-                <td className="px-6 py-4">{item.name}</td>
-                <td className="px-6 py-4">{item.quantity}</td>
-                <td className="px-6 py-4">${!isNaN(price) ? price.toFixed(2) : 'Invalid price'}</td>
+                <tr key={uniqueKey} onClick={() => goToOrderDetail(order.id)} className="odd:bg-blue-100 even:bg-blue-200 hover:bg-yellow-200 cursor-pointer text-wtx">
+                <th scope="row" className=" border-b border-r border-brd px-6 py-4 font-medium">{item.sku}</th>
+                <td className="border-b border-r border-brd px-6 py-3">{item.name}</td>
+                <td className="border-b border-r border-brd px-6 py-3">{item.quantity}</td>
+                <td className="border-b border-r border-brd px-6 py-3">${!isNaN(price) ? price.toFixed(2) : 'Invalid price'}</td>
               </tr>
             );
           })

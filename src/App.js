@@ -21,13 +21,12 @@ function App() {
 
           {/* Right section (empty) */}
           <div className="flex-initial">
-            {/* Additional links or content can go here */}
           </div>
         </div>
       </nav>
 
       {/* Routes */}
-      <div className="App">
+      <div className='bg-bgbg'>
         <Routes>
           <Route path="/" element={<OrdersTable />} />
           <Route path="/order/:orderId" element={<OrderDetail />} />

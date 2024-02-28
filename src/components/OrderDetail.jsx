@@ -9,28 +9,27 @@ const OrderDetail = () => {
 
   useEffect(() => {
     const fetchOrder = async () => {
+      if (!orderId) {
+        setLoading(false);
+        return;
+      }
+      
       try {
-        console.log('Fetching order with ID:', orderId); // Debug log
         const response = await axios.get(`https://eshop-deve.herokuapp.com/api/v2/orders/${orderId}`, {
           headers: {
             Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`
           }
         });
-        console.log('Order response:', response.data); // Debug log
         setOrder(response.data);
       } catch (error) {
         console.error('Error fetching order details:', error);
+        setOrder(null);
       } finally {
         setLoading(false);
       }
     };
 
-    if (orderId) {
-      fetchOrder();
-    } else {
-      console.log('No order ID provided.'); // Debug log
-      setLoading(false);
-    }
+    fetchOrder();
   }, [orderId]);
 
   if (loading) {
@@ -38,18 +37,15 @@ const OrderDetail = () => {
   }
 
   if (!order) {
-    return <div>Order not found.</div>;
+    return <div>Order not found or there was an error loading the order details.</div>;
   }
-
 
   return (
     <div className="p-4">
       <h2 className="text-lg font-bold mb-4">Order Detail</h2>
       <p><strong>Order Number:</strong> {order.number}</p>
       <p><strong>Status:</strong> {order.fulfillmentStatus?.status}</p>
-      {/* ... additional fields */}
       
-      {/* Display items list if available */}
       <h3 className="text-md font-bold mt-4 mb-2">Items Ordered:</h3>
       {order.items && order.items.length > 0 ? (
         <ul>
@@ -65,8 +61,6 @@ const OrderDetail = () => {
       ) : (
         <p>No items found in this order.</p>
       )}
-
-      {/* ... additional details as needed */}
     </div>
   );
 };
