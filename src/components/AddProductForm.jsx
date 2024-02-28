@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+
+
+{/*Non-Functional*/}
+
 const AddProductForm = ({ onAddProduct }) => {
   const [product, setProduct] = useState({ sku: '', name: '', quantity: '', price: '' });
   const handlePayment = () => {
