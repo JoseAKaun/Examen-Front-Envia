@@ -7,5 +7,10 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  theme:{
+    colors:{
+      navblue : '#bfdbfe'
+    }
+  }
 }
 
